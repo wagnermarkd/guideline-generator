@@ -1,0 +1,37 @@
+%! PS
+/in {72 mul} def
+<< /PageSize [5 in 3 in] >> setpagedevice
+/lightness 0.9 def
+/weight 0.1 def
+
+lightness setgray
+weight setlinewidth
+
+/offset 3 0.125 sub def
+
+/drawline {
+0 in offset in moveto
+5 in offset in lineto stroke
+/offset offset 0.125 sub def
+offset = 
+}
+def
+
+50 {drawline} repeat 
+
+/offset 0 def
+
+/drawline {
+offset in 3 in moveto
+offset 3 
+55 cos 55 sin div
+mul sub
+in
+0 in lineto stroke
+/offset offset 0.25 add def
+offset = 
+}
+def
+
+50 {drawline} repeat 
+showpage
